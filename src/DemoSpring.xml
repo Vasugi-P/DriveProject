@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		<!-- Bean wiring -->
+	<bean id="v" class="com.demo.spring.Passenger" autowire="byType">
+		<property name="name" value="vasu"></property>
+		<!--<property name="vehicle" ref="a"></property>  -->
+	</bean>
+	<bean id="vehicle" class="com.demo.spring.Car" autowire-candidate="false"/>
+	<bean id="v2" class="com.demo.spring.Bike" />
+</beans>
